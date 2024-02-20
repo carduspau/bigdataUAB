@@ -3,5 +3,5 @@ Hem fet servir l'API d'Spotify per obtenir artistes relacionats a partir d'un ar
 els relacionats dels relacionats. Per això hem fet servir la llibreria Spotipy amb l'API d'Spotify (Spotify Developers).
 Finalment, hem exportat els resultats obtinguts a un excel, adjuntat en aquesta carpeta. Hem importat pandas per això.
 
-**Per la setmana que ve**
+**Per la setmana que ve**<br>
 Posar també més informació dels artistes, tota la que ofereixi l'API (només pels primers relacionats).

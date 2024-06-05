@@ -4,7 +4,7 @@ import json
 import glob
 import pandas as pd
 
-"""api_client_id = ""
+api_client_id = ""
 api_client_secret = ""
 
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(api_client_id,api_client_secret))
@@ -25,7 +25,7 @@ def get_playlist(playlist, offset):
 
 for playlist in playlist_list:
     offset = 0
-    get_playlist(playlist, offset)"""
+    get_playlist(playlist, offset)
 
 
 files = glob.glob("*.json")

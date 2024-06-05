@@ -4,7 +4,7 @@ Profundització de la llibreria *Pandas* per completar dos exercicis.
 
 [Documentació dels exercicis](https://adriapadilla.github.io/bigdata-uab/pandas/ejercicio_pandas_1.html)
 
-## Primer exercici: exercici_1.py
+## Primer exercici: Introducció a Pandas (exercici_1.py)
 
 A partir de tres llistes: *notes*, *noms* i *cognoms*, 
 ```python
@@ -90,3 +90,37 @@ for i in range(len(notes)):
 | Marta Llopart       | 6    | Aprovat               | -1.29                 | -17.70                     |
 
 Consultar a [exercici_1.csv](https://github.com/carduspau/bigdataUAB/blob/main/Classe%205%20-%20Pandas/exercici_1.csv)
+
+## Segon exercici: Anàlisi de dades de YouTube (exercici_2.py)
+
+A partir d'un *dataset* en .XLSX proporcionat amb les dades del canal de YouTube "KEXP", volem saber:
+1. Volum general: Quantes files i columnes té el dataset complet?
+2. Composició del dataset: Quines columnes componen el dataset?
+3. Calcula la desviació (absoluta i percentual) de cada vídeo sobre la mitjana d'espectadors/comentaris/m'agrada del canal.
+4. Localitza el vídeo més vist.
+5. Localitza el vídeo més comentat.
+6. Crea una nova columna per a cada un dels valors calculats anteriorment, i crea un nou dataset final que incorpori tota la nova informació.
+7. Calcula la durada en segons de cada vídeo, i indica la seva desviació percentual sobre la mitjana de durada dels vídeos del canal.
+8. Visualitza totes les estadístiques calculades anteriorment en un gràfic de Tableau.
+
+**📄 Processament i modificació de dades**
+```python
+average_views = df["viewCount"].mean()
+average_comments = df["commentCount"].mean()
+average_likes = df["likeCount"].mean()
+
+df["desviacio_likes_total"] = df["likeCount"] - average_likes
+df["desviacio_likes_percentual"] = (df["likeCount"] - average_likes) / average_likes * 100
+
+df["desviacio_comments_total"] = df["commentCount"] - average_comments
+df["desviacio_comments_percentual"] = (df["commentCount"] - average_comments) / average_comments * 100
+
+df["desviacio_views_total"] = df["viewCount"] - average_views
+df["desviacio_views_percentual"] = (df["viewCount"] - average_views) / average_views * 100
+
+max_view = df[df["viewCount"] == df["viewCount"].max()]
+
+max_comment = df[df["commentCount"] == df["commentCount"].max()]
+```
+
+Consultar a [exercici_2.csv](https://github.com/carduspau/bigdataUAB/blob/main/Classe%205%20-%20Pandas/exercici_2.csv)

@@ -40,7 +40,7 @@ final = pd.concat(llista_artistes)
 final.to_excel("dataset.xlsx")
 ```
 
-**📄 Exporta les dades al següent fitxer Excel:**- [dataset.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset.xlsx)
+**📄 Exporta les dades al següent fitxer Excel:** [dataset.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset.xlsx)
 
 ## Segon codi: deures.py
 Hem d'exportar la màxima informació dels artistes, com el *nom*, *seguidors*, *enllaç*, *identificador*, *gèneres*, *href*, *id*, *imatge*, *popularitat*, *tipus* i *uri*.
@@ -61,4 +61,4 @@ frame = pd.DataFrame({
         "uri": uri,
 }, index=[0])
 ```
-**📄 Exporta les dades al següent fitxer Excel:**- [dataset_deures.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset_deures.xlsx)
+**📄 Exporta les dades al següent fitxer Excel:** [dataset_deures.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset_deures.xlsx)

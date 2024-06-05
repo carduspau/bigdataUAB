@@ -1,11 +1,63 @@
 # CLASSE 2 - 20/02/2024
 
-Hem fet servir l'API d'Spotify per obtenir artistes relacionats a partir d'un artista. També hem escalat l'aplicació, generant 
-els relacionats dels relacionats. Per això hem fet servir la llibreria Spotipy amb l'API d'Spotify (Spotify Developers).
-Finalment, hem exportat els resultats obtinguts a un excel, adjuntat en aquesta carpeta. Hem importat pandas per això.
+Introducció a l'API d'Spotify fent servir la llibreria Spotipy.
 
-**Per la setmana que ve**<br>
-Posar també més informació dels artistes, tota la que ofereixi l'API (només pels primers relacionats).
+## Primer codi: main.py
 
+Aquest codi exporta un fitxer excel amb el *nom*, *seguidors* i *enllaç* dels artistes relacionats dels relacionats a partir de l'ID d'un artista.
 
+**🎵Extracció d'informació d'un artista**
 
+```python
+artist_id ="7ltDVBr6mKbRvohxheJ9h1"
+resposta = spotify.artist_related_artists(artist_id)
+```
+**👨🏼‍🎤Obtenció del nom, seguidors i enllaç dels artistes relacionats**
+```python
+for i in artistes:
+    artist_id_related = i["id"]
+    resposta_related = spotify.artist_related_artists(artist_id_related)
+    artistes_related = resposta_related["artists"]
+
+    for a in artistes_related:
+        nom = a["name"]
+        seguidors = a["followers"]["total"]
+        link = a["external_urls"]["spotify"]
+
+        frame = pd.DataFrame({
+            "nom": nom,
+            "seguidors": seguidors,
+            "enllaç": link,
+        }, index=[0])
+
+        llista_artistes.append(frame)
+```
+*Aquest bucle s'executa dues vegades per a obtenir els relacionats dels relacionats.*
+
+**⏏️Preparació i exportació de dades**
+```python
+final = pd.concat(llista_artistes)
+final.to_excel("dataset.xlsx")
+```
+
+**📄 Exporta les dades al següent fitxer Excel:**- [dataset.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset.xlsx)
+
+## Segon codi: deures.py
+Hem d'exportar la màxima informació dels artistes, com el *nom*, *seguidors*, *enllaç*, *identificador*, *gèneres*, *href*, *id*, *imatge*, *popularitat*, *tipus* i *uri*.
+
+La diferència amb el primer codi és l'extracció de variables:
+```python
+frame = pd.DataFrame({
+        "nom": nom,
+        "seguidors": seguidors,
+        "enllaç": link,
+        "identificador": id,
+        "generes": genres,
+        "href api": href_api,
+        "id artista": id_artista,
+        "imatge": imatge,
+        "popularitat": popularity,
+        "tipus": type,
+        "uri": uri,
+}, index=[0])
+```

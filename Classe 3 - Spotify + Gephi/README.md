@@ -23,6 +23,9 @@ for artist in resultat["artists"]:
 ```
 **📄 Exporta les dades al següent fitxer CSV:** [graf.csv](https://github.com/carduspau/bigdataUAB/blob/main/Classe%203%20-%20Spotify%20+%20Gephi/graf.csv)
 
+**GRAF de la representació de les dades:** 
+![Primer graf](https://i.ibb.co/McKtZdm/Captura-de-pantalla-2024-06-05-163030.png)
+
 ## Segon codi: generes_a_partir_de_playlist.py
 Aquest codi exporta un csv amb la informació d'origen i destí entre els artistes i els gèneres musicals a partir de l'ID d'una playlist.
 
@@ -46,6 +49,9 @@ for id in llista_id_artistes:
 ```
 
 **📄 Exporta les dades al següent fitxer CSV:** [graf_generesmusicals.csv](https://github.com/carduspau/bigdataUAB/blob/main/Classe%203%20-%20Spotify%20+%20Gephi/graf_generesmusicals.csv)
+
+**GRAF de la representació de les dades:** 
+![Primer graf](https://i.ibb.co/ZXsYLpC/Captura-de-pantalla-2024-06-05-163528.png)
 
 ## Tercer codi: obtencio_generes_dels_relacionats.py
 Aquest codi exporta un .CSV amb la informació d'origen i destí entre els artistes i gèneres musicals dels artistes relacionats a partir de l'ID d'un artista.
@@ -82,3 +88,7 @@ df = pd.DataFrame(llista_final, columns=["source", "target"])
 df.to_csv("graf_generesmusicals.csv", sep=",", index=False)
 ```
 **📄 Exporta les dades al següent fitxer CSV:** [generes_dels_relacionats.csv](https://github.com/carduspau/bigdataUAB/blob/main/Classe%203%20-%20Spotify%20%2B%20Gephi/generes_dels_relacionats.csv)
+
+
+**GRAF de la representació de les dades:** 
+![Primer graf](https://i.ibb.co/4J7SBxV/Captura-de-pantalla-2024-06-05-163724.png)

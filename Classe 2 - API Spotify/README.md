@@ -61,3 +61,4 @@ frame = pd.DataFrame({
         "uri": uri,
 }, index=[0])
 ```
+**📄 Exporta les dades al següent fitxer Excel:**- [dataset_deures.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset_deures.xlsx)

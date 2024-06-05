@@ -2,7 +2,7 @@
 
 Introducció a l'API d'Spotify fent servir la llibreria Spotipy.
 
-##1️⃣ Primer codi: main.py
+## Primer codi: main.py
 
 Aquest codi exporta un fitxer excel amb el *nom*, *seguidors* i *enllaç* dels artistes relacionats dels relacionats a partir de l'ID d'un artista.
 
@@ -42,7 +42,7 @@ final.to_excel("dataset.xlsx")
 
 **📄 Exporta les dades al següent fitxer Excel:** [dataset.xlsx](https://github.com/carduspau/bigdataUAB/blob/main/Classe%202%20-%20API%20Spotify/dataset.xlsx)
 
-##2️⃣ Segon codi: deures.py
+## Segon codi: deures.py
 Hem d'exportar la màxima informació dels artistes, com el *nom*, *seguidors*, *enllaç*, *identificador*, *gèneres*, *href*, *id*, *imatge*, *popularitat*, *tipus* i *uri*.
 
 La diferència amb el primer codi és l'extracció de variables:
